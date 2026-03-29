@@ -1,0 +1,78 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHD Time Boxing Tool</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-4">ADHD Time Boxing Tool</h1>
+
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <div class="mb-4">
+        <label for="energyLevel" class="block font-bold mb-2">Energy Level:</label>
+        <div class="flex">
+          <button id="highEnergyBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2">High</button>
+          <button id="lowEnergyBtn" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Low</button>
+        </div>
+      </div>
+
+      <div class="mb-4" id="timeframeSelectContainer" style="display: none;">
+        <label for="timeframeSelect" class="block font-bold mb-2">Timeframe:</label>
+        <select id="timeframeSelect" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <option value="">Select Timeframe</option>
+          <option value="short">Short (10-30 minutes)</option>
+          <option value="long">Long (60 minutes)</option>
+        </select>
+      </div>
+
+      <div class="mb-4" id="durationSelectContainer" style="display: none;">
+        <label for="durationSelect" class="block font-bold mb-2">Duration:</label>
+        <select id="durationSelect" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <option value="">Select Duration</option>
+          <option value="10">10 minutes</option>
+          <option value="20">20 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="60">60 minutes</option>
+        </select>
+      </div>
+
+      <div class="mb-4" id="suggestedTasksContainer" style="display: none;">
+        <h2 class="text-xl font-bold mb-2">Suggested Tasks:</h2>
+        <ul id="taskList" class="list-disc pl-4"></ul>
+      </div>
+
+      <div class="mb-4" id="addTaskContainer" style="display: none;">
+        <label for="taskInput" class="block font-bold mb-2">Add Selected Task:</label>
+        <input type="text" id="taskInput" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter a task">
+        <button id="addTaskBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Add Task</button>
+      </div>
+
+      <div class="mb-4">
+        <h2 class="text-xl font-bold mb-2">Added Tasks:</h2>
+        <ul id="addedTaskList" class="list-disc pl-4"></ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold mb-2">Time Boxing Timer:</h2>
+        <div id="timer" class="text-4xl font-bold mb-4">25:00</div>
+        <button id="startTimerBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Start</button>
+        <button id="resetTimerBtn" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">Reset</button>
+      </div>
+
+      <div class="mt-4">
+        <h2 class="text-xl font-bold mb-2">Add to Calendar:</h2>
+        <button id="googleCalendarBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">Google Calendar</button>
+        <button id="outlookCalendarBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">Outlook Calendar</button>
+        <button id="icalCalendarBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">iCal Calendar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
