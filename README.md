@@ -31,7 +31,7 @@ A clear countdown that creates urgency without stress.
 ### 🔋 Energy-Based Planning
 Choose your energy level (High / Low) and get tasks that match how you feel.
 
-### 📅 Calendar Integration
+### 📅 Calendar Integration - Coming Soon!
 Quickly add time blocks to:
 - Google Calendar  
 - Outlook Calendar  
