@@ -4,6 +4,8 @@
 
 👉 **Live Demo:** https://davidjenner.github.io/TimeBox/
 
+![ADHD Timeboxing Demo](./assets/TimeBox-Demo-Screen-recording-30032026.gif)
+
 ---
 
 Struggling to start tasks, stay focused, or even feel where the time goes?  
@@ -117,3 +119,10 @@ Try it here:
 git clone https://github.com/your-username/adhd-timeboxing-tool.git
 cd adhd-timeboxing-tool
 open index.html
+
+
+## ☕ Support
+
+<a href="https://www.buymeacoffee.com/godavid" target="_blank">
+  <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" />
+</a>
