@@ -2,7 +2,9 @@
 
 **Turn overwhelm into action — one focused block at a time**
 
-👉 **Live Demo:** https://davidjenner.github.io/TimeBox/
+👉 ** Visit Demo Site :** https://davidjenner.github.io/TimeBox/
+
+## 👉 Live Demo
 
 ![ADHD Timeboxing Demo](./assets/TimeBox-Demo-Screen-recording-30032026.gif)
 
@@ -113,15 +115,7 @@ Try it here:
 
 ---
 
-## 📦 Installation
-
-```bash
-git clone https://github.com/your-username/adhd-timeboxing-tool.git
-cd adhd-timeboxing-tool
-open index.html
-
-
-## ☕ Support
+## ☕ Buy me a Coffee
 
 <a href="https://www.buymeacoffee.com/godavid" target="_blank">
   <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" />
