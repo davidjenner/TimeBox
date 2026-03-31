@@ -5,11 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TimeBox — ADHD Focus Tool</title>
+  <meta name="description" content="TimeBox is a free ADHD-friendly time boxing & focus tool that helps reduce overwhelm, match tasks to your energy level, plan short work sessions, and build momentum with gentle step-by-step productivity support.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-  <div class="app-card">
+  <div class="site-shell">
+    <header class="site-header">
+      <a href="https://davidjenner.github.io/TimeBox/" class="site-brand" aria-label="TimeBox home">
+        <span class="site-brand-icon"><i class="fas fa-clock"></i></span>
+        <span class="site-brand-text">
+          <strong>TimeBox</strong>
+          <small>Part of David Jenner's accessibility-focused tools</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Project links">
+        <a href="https://davidjenner.github.io/OpenDyslexic-Converter/" target="_blank" rel="noopener noreferrer">OpenDyslexic Converter</a>
+        <a href="https://outseek.davidjenner.workers.dev/" target="_blank" rel="noopener noreferrer">Outseek</a>
+        <a href="https://github.com/davidjenner" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <div class="app-card">
 
     <!-- Header -->
     <div class="app-header">
@@ -27,7 +46,7 @@
         </svg>
         <div class="header-title-block">
           <h1>TimeBox</h1>
-          <p>ADHD-friendly time boxing &amp; focus tool</p>
+          <p>ADHD-friendly time boxing &amp; focus tool designed to reduce overwhelm, build momentum, and make it easier to start and finish meaningful tasks</p>
         </div>
         <div class="xp-badge">
           <div class="xp-badge-inner">
@@ -287,6 +306,54 @@
       <div class="victory-stats" id="victoryStats"></div>
       <button id="victoryClose" class="btn-victory-close">Start Another Session ↺</button>
     </div>
+  </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <i class="fas fa-clock"></i>
+              <span>TimeBox</span>
+            </div>
+            <p>ADHD-friendly time boxing and focus support — simple, calm, and free to use.</p>
+          </div>
+
+          <div class="footer-feedback">
+            <h3>Leave Feedback</h3>
+            <p>Found a bug or have a suggestion? I'd love to hear from you.</p>
+            <a href="https://github.com/davidjenner/TimeBox/issues" target="_blank" rel="noopener noreferrer" class="btn-feedback">
+              <i class="fab fa-github"></i> Open an Issue on GitHub
+            </a>
+          </div>
+
+          <div class="footer-social">
+            <h3>Other Projects</h3>
+            <div class="social-links">
+              <a href="https://davidjenner.github.io/OpenDyslexic-Converter/" target="_blank" rel="noopener noreferrer" class="social-link" title="OpenDyslexic Converter" aria-label="OpenDyslexic Converter">
+                <i class="fas fa-font"></i>
+              </a>
+              <a href="https://outseek.davidjenner.workers.dev/" target="_blank" rel="noopener noreferrer" class="social-link" title="Outseek" aria-label="Outseek">
+                <i class="fas fa-search"></i>
+              </a>
+              <a href="https://github.com/davidjenner" target="_blank" rel="noopener noreferrer" title="GitHub" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://buymeacoffee.com/godavid" target="_blank" rel="noopener noreferrer" title="Buy Me a Coffee" class="social-link" aria-label="Buy Me a Coffee">
+                <i class="fas fa-coffee"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 David Jenner. All rights reserved.</p>
+          <p class="footer-note"><i class="fas fa-heart"></i> Built with accessibility and neurodivergent-friendly design in mind.</p>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
