@@ -3,11 +3,6 @@
 // ─── DOM refs ───────────────────────────────────────────────
 const highEnergyBtn       = document.getElementById('highEnergyBtn');
 const lowEnergyBtn        = document.getElementById('lowEnergyBtn');
-const gifPopup            = document.getElementById('gifPopup');
-const gifClose            = document.getElementById('gifClose');
-const gifMessage          = document.getElementById('gifMessage');
-const gifImg              = document.getElementById('gifImg');
-const gifLoading          = document.getElementById('gifLoading');
 const xpToast             = document.getElementById('xpToast');
 const xpValueEl           = document.getElementById('xpValue');
 const xpLevelEl           = document.getElementById('xpLevel');
@@ -67,7 +62,6 @@ let totalTime        = 0;
 let timerInterval    = null;
 let running          = false;
 let xp               = 0;
-let gifTimer         = null;
 
 // Ring circumference: 2π × r = 2π × 75 ≈ 471.2
 const RING_CIRCUMFERENCE = 2 * Math.PI * 75;
@@ -257,62 +251,6 @@ function addXP(amount, originEl) {
   setTimeout(() => xpToast.classList.add('hidden'), 1850);
 }
 
-// ─── GIF popup ───────────────────────────────────────────────
-const GIF_MESSAGES = [
-  'Quest accepted! 🎮',
-  'MISSION: POSSIBLE 💪',
-  'You absolute legend! 🦁',
-  'Focus mode: ACTIVATED 🤖',
-  'Locked in. Let\'s smash it! 🔥',
-  'Your future self is proud 🌟',
-  'No excuses, only results! 💥',
-  'This is YOUR moment! ⚡',
-  'Brain engaged. Let\'s go! 🧠',
-  'Task acquired. Initiating… 🚀',
-];
-
-const GIF_TAGS = ['excited motivated', 'lets go hype', 'you got this', 'pumped up', 'high five celebrate', 'spongebob excited'];
-
-async function showGif() {
-  clearTimeout(gifTimer);
-  gifMessage.textContent = GIF_MESSAGES[Math.floor(Math.random() * GIF_MESSAGES.length)];
-  gifImg.src = '';
-  gifLoading.style.display = 'flex';
-  gifImg.style.display = 'none';
-  gifPopup.classList.remove('hidden');
-  gifPopup.style.animation = 'none';
-  requestAnimationFrame(() => {
-    gifPopup.style.animation = 'slideInRight 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
-  });
-
-  try {
-    const tag = GIF_TAGS[Math.floor(Math.random() * GIF_TAGS.length)];
-    const res = await fetch(
-      `https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=${encodeURIComponent(tag)}&rating=g`
-    );
-    const data = await res.json();
-    const url = data?.data?.images?.fixed_height?.url;
-    if (url) {
-      gifImg.onload = () => {
-        gifLoading.style.display = 'none';
-        gifImg.style.display = 'block';
-      };
-      gifImg.src = url;
-    }
-  } catch (_) {
-    gifLoading.textContent = '😂 You\'ve got this!';
-  }
-
-  gifTimer = setTimeout(hideGif, 6000);
-}
-
-function hideGif() {
-  gifPopup.classList.add('hidden');
-  clearTimeout(gifTimer);
-}
-
-gifClose.addEventListener('click', hideGif);
-
 // ─── Add task ─────────────────────────────────────────────────
 addTaskBtn.addEventListener('click', addTask);
 taskInput.addEventListener('keydown', e => {
@@ -327,7 +265,6 @@ function addTask() {
   renderAddedTasks();
   setActiveDot(3);
   addXP(10, addTaskBtn);
-  showGif();
 }
 
 function renderAddedTasks() {
